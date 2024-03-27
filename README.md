@@ -16,7 +16,7 @@
 <br />
 <div align="center">
 
-<h3 align="center">Philosopher's Dinner Exercise</h3>
+<h3 align="center">Color Cubes Game</h3>
 
   <p align="center">
     AMAS Exercise using the AMAK framework
@@ -35,9 +35,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Exercise
 
-A table has X philosophers sitting around it. The philosophers do only two things: think and eat. While eating, they are not thinking, and while thinking, they are not eating. The philosophers share a big plate of spaghetti. There are X forks on the table, one between each pair of adjacent philosophers. To eat, a philosopher needs to pick up the two forks next to him. The problem is to design a protocol for the philosophers that prevents deadlock (two or more philosophers waiting indefinitely for each other to release a fork) and avoids starvation (a philosopher waiting indefinitely to eat).
+Given a warehouse divided in multiple areas and packages of different colors, the goal is to group packages of the same color in the same area.
+To do that, multiple robots are available. Each robot can move to any area and pick up a package. The robot can then move to another area and drop the package.
 
-More infos https://en.wikipedia.org/wiki/Dining_philosophers_problem
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -53,14 +55,25 @@ More infos https://en.wikipedia.org/wiki/Dining_philosophers_problem
 
 ### Exercise
 
-The class __PhilosopherAgent__ contains the behavior of a philosopher. Complete the method _onDecideAndAct_ so that the philosophers are cooperative. The goal is for the philosophers to eat the same quantity.
+The exercise is to implement the robots' behavior to group packages of the same color in the same area.
 
-### Useful methods
 
-* __fork.release(this)__ : release a fork
-* __fork.tryTake(this)__ : try to take a fork, returns false if the fork is already taken
-* __getMostCriticalNeighbor(boolean includingMe)__ : returns the most critical neighbor. If includingMe is true, the current agent is included in the search
-* __eatPastas()__ : eat pastas
+Areas do not have a specific color, they can receive packages of any color.
+
+
+Robots can carry up to 4 packages at the same time.
+
+Robots do not have a specific color, they can pick up packages of any color.
+
+
+The solution must work for A areas and C colors, with A >= C and any number of robots greater than 0.
+The solution must support the addition/removal of robots, packages, colors, and areas at runtime.
+
+### Initial state
+- The warehouse is divided into A areas
+- There are C colors
+- There are R robots
+- Each area has a random number of packages of random colors
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
