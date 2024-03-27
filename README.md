@@ -35,8 +35,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Exercise
 
-Given a warehouse divided in multiple areas and packages of different colors, the goal is to group packages of the same color in the same area.
-To do that, multiple robots are available. Each robot can move to any area and pick up a package. The robot can then move to another area and drop the package.
+Given a warehouse divided in multiple areas and cubes of different colors, the goal is to group cubes of the same color in the same area.
+To do that, multiple robots are available. Each robot can move to any area and pick up a cube. The robot can then move to another area and drop the cube.
 
 
 
@@ -55,25 +55,30 @@ To do that, multiple robots are available. Each robot can move to any area and p
 
 ### Exercise
 
-The exercise is to implement the robots' behavior to group packages of the same color in the same area.
+The exercise is to implement the robots' behavior to group cubes of the same color in the same area.
 
 
-Areas do not have a specific color, they can receive packages of any color.
+Areas do not have a specific color, they can receive cubes of any color.
 
 
-Robots can carry up to 4 packages at the same time.
+Robots can carry up to 4 cubes at the same time.
 
-Robots do not have a specific color, they can pick up packages of any color.
+Robots do not have a specific color, they can pick up cubes of any color.
 
 
-The solution must work for A areas and C colors, with A >= C and any number of robots greater than 0.
+The solution must work for any number of areas (greater than or equal to number of colors), colors, robots (>0) and cubes.
 The solution must support the addition/removal of robots, packages, colors, and areas at runtime.
 
 ### Initial state
-- The warehouse is divided into A areas
-- There are C colors
-- There are R robots
-- Each area has a random number of packages of random colors
+
+- Each area has a random number of cubes of random colors
+- Robots are placed randomly in an area of the warehouse
+
+### Expected result
+
+- All cubes of the same color are grouped in the same area
+- An area only contains cubes of the same color
+- Robots are not carrying any cube
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
