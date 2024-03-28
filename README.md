@@ -33,10 +33,13 @@
 
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Exercise
 
-Given a warehouse divided in multiple areas and cubes of different colors, the goal is to group cubes of the same color in the same area.
-To do that, multiple robots are available. Each robot can move to any area and pick up a cube. The robot can then move to another area and drop the cube.
+Given a warehouse divided in multiple areas and cubes of different colors, the goal is to group cubes of the same color
+in the same area.
+To do that, multiple robots are available. Each robot can move to any area and pick up a cube. The robot can then move
+to another area and drop the cube.
 
 
 
@@ -44,6 +47,7 @@ To do that, multiple robots are available. Each robot can move to any area and p
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 ### Prerequisites
@@ -53,20 +57,22 @@ To do that, multiple robots are available. Each robot can move to any area and p
 * Open the project in your favorite IDE (Use open project in IntelliJ IDEA or Import Gradle Project in Eclipse)
 * Run Launcher.main()
 
-### Exercise
+### Notes
+
+For each exercise, you are expected to design the solution on paper before implementing it.
+
+### Exercise 1
 
 The exercise is to implement the robots' behavior to group cubes of the same color in the same area.
 
-
 Areas do not have a specific color, they can receive cubes of any color.
 
-
-Robots can carry up to 4 cubes at the same time.
-
+Robots can only carry one cube at a time.
+Robots cannot directly interact with each other.
 Robots do not have a specific color, they can pick up cubes of any color.
 
-
-The solution must work for any number of areas (greater than or equal to number of colors), colors, robots (>0) and cubes.
+The solution must work for any number of areas (greater than or equal to number of colors), colors, robots (>0) and
+cubes.
 The solution must support the addition/removal of robots, packages, colors, and areas at runtime.
 
 ### Initial state
@@ -79,6 +85,32 @@ The solution must support the addition/removal of robots, packages, colors, and 
 - All cubes of the same color are grouped in the same area
 - An area only contains cubes of the same color
 - Robots are not carrying any cube
+
+### Questions?
+
+- Is it possible for the system to solve the problem without allowing robots to directly communicate?
+- Can robots exchange information without direct communication?
+
+### Exercise 2
+
+Allow robots to communicate with each other.
+
+Agents can communicate using mailboxes:
+
+```java
+// Send a message to the agent neighbor1
+neighbor1.getMailbox().receive(new MyMessage());
+
+// Read the message from the mailbox
+var message = this.getMailbox().read(MyMessage.class);
+if (message.isPresent()) {
+    // Do something with the message
+}
+```
+
+### Exercise 3
+
+Update the solution so that robots can pick up to four cubes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
